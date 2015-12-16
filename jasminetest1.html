@@ -1,0 +1,25 @@
+<head>
+  <title>Texts</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> inputTemplate}}
+  {{> viewTemplate}}
+</body>
+
+<template name="inputTemplate">
+  <form class="main-form">
+    <input type="text" name="textBox" placeholder="Enter text here . .">
+    <button type="submit" name="submit">Submit</button>
+  </form>
+</template>
+
+<template name="viewTemplate">
+    <ul>
+      {{#each entries}}
+        <li><h2>{{text}}</h2><br/><i><strong>Posted at:</strong></i>{{createdAt}}</li>
+      {{/each}}
+    </ul>
+</template>
